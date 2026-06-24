@@ -1,0 +1,60 @@
+# OS
+.DS_Store
+Thumbs.db
+.thumbnail
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Generated at runtime (canvas auto-setup or bootstrap-harness.mjs)
+/BOUND_DS.json
+/ds-helmet.snippet.html
+/.cdp/
+
+# Host-project design system — provided by the host project, never shipped with the harness
+# (see README "The harness does NOT ship _ds/" + CLAUDE.md "ships without a pre-bound design system")
+/_ds/
+
+# Local-only archive (reference material, not published with the harness)
+/_archive/
+
+# Logs / temp
+*.log
+.tmp/
+
+# Local-only scratch (audits, reanalysis, session notes — never commit)
+/.local/
+
+# ==========================================
+# Additional ignores for clean DET project
+# ==========================================
+
+# Heavy local / generated folders (not needed on GitHub/Vercel)
+uploads/
+scraps/
+fixtures/
+.history/
+.cdp/
+
+# Claude Design harness scaffolding (keep only product files)
+CLAUDE.md
+skills/
+scripts/
+templates/
+DESIGN.md
+PLAYBOOK.md
+LIMITATIONS.md
+SKILL.md
+activation-prompt.md
+guidelines/
+docs/
+_adherence.oxlintrc.json
+
+# Generated harness files
+BOUND_DS.json
+ds-helmet.snippet.html
+
+# Large DS bundle is committed if you want the full system source
+# If you want a lighter repo, you can unignore or remove _ds_bundle.js later

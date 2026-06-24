@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Juris8 — Páginas</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  :root {
+    --page-bg: #0A0818;
+  }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--page-bg);
+    color: var(--text, #EDEAF7);
+    font-family: var(--font-sans, 'Geist', system-ui, sans-serif);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+  .portal {
+    width: 100%;
+    max-width: 980px;
+  }
+  .portal-head {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .portal-head .logo {
+    height: 48px;
+    width: auto;
+    max-width: 220px;
+    margin: 0 auto 12px;
+    display: block;
+  }
+  .portal-head h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    letter-spacing: -0.3px;
+  }
+  .portal-head p {
+    color: var(--muted, #807AA0);
+    margin: 0;
+    font-size: 15px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--surface-1, #0D0B1C);
+    border: 1px solid var(--hairline, rgba(173, 167, 199, 0.18));
+    border-radius: 16px;
+    padding: 28px 26px;
+    transition: transform 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(124, 58, 237, 0.35);
+    box-shadow: 0 20px 45px -20px rgba(0, 0, 0, 0.6);
+  }
+  .card-label {
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--juris-300, #B388FB);
+    margin-bottom: 12px;
+  }
+  .card h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    line-height: 1.25;
+  }
+  .card p {
+    color: var(--muted, #807AA0);
+    font-size: 14.5px;
+    line-height: 1.5;
+    margin: 0 0 24px;
+  }
+  .card .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: var(--juris-500, #7C3AED);
+    color: white;
+    text-decoration: none;
+    transition: background 80ms ease;
+  }
+  .card .cta:hover {
+    background: #6B2FD1;
+  }
+  .card .cta::after {
+    content: "→";
+    font-size: 15px;
+    line-height: 1;
+    transition: transform 120ms ease;
+  }
+  .card:hover .cta::after {
+    transform: translateX(2px);
+  }
+  .footer {
+    margin-top: 48px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--ink-500, #5B557A);
+  }
+  @media (max-width: 640px) {
+    .portal-head h1 { font-size: 24px; }
+    .cards { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <div class="portal">
+    <div class="portal-head">
+      <img class="logo" src="assets/logo.png" alt="Juris8">
+      <h1>Juris8 — Páginas</h1>
+      <p>2 landing pages + ferramenta de caixa de entrada</p>
+    </div>
+
+    <div class="cards">
+      <!-- Card 1: Landing Escritórios -->
+      <div class="card">
+        <div class="card-label">Landing Page</div>
+        <h2>Landing Principal — Escritórios</h2>
+        <p>
+          Página principal para advogados e escritórios. Apresenta o DET Monitor, receita recorrente e benefícios do monitoramento.
+        </p>
+        <a href="site/index.html" class="cta">Abrir página</a>
+      </div>
+
+      <!-- Card 2: Landing Empresas -->
+      <div class="card">
+        <div class="card-label">Landing Page</div>
+        <h2>Landing Grupos — Múltiplos CNPJs</h2>
+        <p>
+          Landing para grupos empresariais, holdings e matriz com filiais. Foca na caixa unificada do DET para vários CNPJs.
+        </p>
+        <a href="site/empresas.html" class="cta">Abrir página</a>
+      </div>
+
+      <!-- Card 3: Ferramenta Caixa de Entrada -->
+      <div class="card">
+        <div class="card-label">Ferramenta</div>
+        <h2>DET Monitor — Caixa de Entrada</h2>
+        <p>
+          Caixa de entrada de leads conectada ao Supabase. Carrega e atualiza os contatos vindos das landpages.
+        </p>
+        <a href="ui_kits/det-monitor/leads.html" class="cta">Abrir Caixa de Leads</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      Juris8 Design System • Navegação local
+    </div>
+  </div>
+</body>
+</html>
