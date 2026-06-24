@@ -58,3 +58,6 @@ ds-helmet.snippet.html
 
 # Large DS bundle is committed if you want the full system source
 # If you want a lighter repo, you can unignore or remove _ds_bundle.js later
+
+# Separate project - Captura de Leads (moved to own repo https://github.com/eucaiogomes/Captura-de-Leads.git)
+captura-de-leads/
